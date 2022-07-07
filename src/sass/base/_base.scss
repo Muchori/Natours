@@ -1,0 +1,16 @@
+/* reset the webpage */
+*, *:before, *:after {
+  margin: 0; // reset the margin
+  padding: 0; // reset the padding
+  box-sizing: inherit; // reset the box-sizing
+}
+
+html {
+  // defines what one rem is in pixels
+  font-size: 62.5%;
+}
+
+body {
+  // defines the font-size of the body
+  box-sizing: border-box;
+}
