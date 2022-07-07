@@ -1,3 +1,7 @@
+# Nature Tours Landing Page
+
+This project uses react with pure CSS and SASS
+
 ### `npm start`
 
 Runs the app in the development mode.
