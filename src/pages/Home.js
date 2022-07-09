@@ -1,4 +1,4 @@
-import { GiWorld } from 'react-icons/gi'
+/* eslint-disable jsx-a11y/img-redundant-alt */
 import '../../src/icon-font.css'
 
 function Home() {
@@ -231,6 +231,13 @@ function Home() {
         {/* Section stories */}
 
         <section className='section-stories'>
+          <div className='bg-video'>
+            <video className='bg-video__content' autoPlay muted loop>
+              <source src={require('../images/video.mp4')} type='video/mp4' />
+              <source src={require('../images/video.webm')} type='video/webm' />
+              Your is not supported!
+            </video>
+          </div>
           <div className='u-center-text u-margin-bottom-big'>
             <h2 className='heading-secondary'>
               We make people genuinely happy
@@ -241,13 +248,14 @@ function Home() {
               <figure className='story__shape'>
                 <img
                   src={require('../images/nat-8.jpg')}
-                  alt='Prson on a tour'
+                  alt='Person on a tour'
                   className='story__img'
                 />
+                <figcaption className='story__caption'>John Doe</figcaption>
               </figure>
               <div className='story__text'>
                 <h3 className='heading-tertiary u-margin-bottom-small'>
-                  I had the best week ever with my friends and family
+                  I had the best week ever with my friends and family.
                 </h3>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
@@ -255,6 +263,103 @@ function Home() {
                   consequuntur voluptate optio, et non minus a sed repellendus,
                   quod architecto. Eaque, illo consequuntur?
                 </p>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='story'>
+              <figure className='story__shape'>
+                <img
+                  src={require('../images/nat-9.jpg')}
+                  alt='Person on a tour'
+                  className='story__img'
+                />
+                <figcaption className='story__caption'>Willy Smith</figcaption>
+              </figure>
+              <div className='story__text'>
+                <h3 className='heading-tertiary u-margin-bottom-small'>
+                  Wow! My life is completely different now.
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint
+                  dolor dolore, eos molestias similique laudantium quis
+                  consequuntur voluptate optio, et non minus a sed repellendus,
+                  quod architecto. Eaque, illo consequuntur?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className='u-center-text u-margin-top-huge'>
+            <a href='#' className='btn btn-text'>
+              Read all stories &rarr;
+            </a>
+          </div>
+        </section>
+
+        <section className='section-book'>
+          <div className='row'>
+            <div className='book'>
+              <div className='book__form'>
+                <form action='#' className='form'>
+                  <div className='u-margin-bottom-medium'>
+                    <h2 className='heading-secondary'>Start booking now</h2>
+                  </div>
+                  <div className='form__group'>
+                    <input
+                      id='name'
+                      type='text'
+                      className='form__input'
+                      placeholder='Full name'
+                      required
+                      autoComplete='off'
+                    />
+                    <label htmlFor='name' className='form__label'>
+                      Full name
+                    </label>
+                  </div>
+                  <div className='form__group'>
+                    <input
+                      id='email'
+                      type='email'
+                      className='form__input'
+                      placeholder='Email address'
+                      required
+                      autoComplete='off'
+                    />
+                    <label htmlFor='email' className='form__label'>
+                      Email address
+                    </label>
+                  </div>
+                  <div className='form__group u-margin-bottom-medium'>
+                    <div className='form__radio-group'>
+                      <input
+                        type='radio'
+                        className='form__radio-input'
+                        id='small'
+                        name='size'
+                      />
+                      <label htmlFor='small' className='form__radio-label'>
+                        <span className='form__radio-button'></span>
+                        Small tour groups
+                      </label>
+                    </div>
+                    <div className='form__radio-group'>
+                      <input
+                        type='radio'
+                        className='form__radio-input'
+                        id='large'
+                        name='size'
+                      />
+                      <label htmlFor='large' className='form__radio-label'>
+                        <span className='form__radio-button'></span>
+                        Large tour groups
+                      </label>
+                    </div>
+                  </div>
+                  <div className='form__group'>
+                    <button className='btn btn--green'>Next step &rarr;</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
