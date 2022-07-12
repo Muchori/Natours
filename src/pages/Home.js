@@ -115,7 +115,7 @@ function Home() {
             </div>
           </div>
         </section>
-        <section className='section-tours'>
+        <section className='section-tours' id='section-tours'>
           <div className='u-center-text u-margin-bottom-big'>
             <h2 className='heading-secondary'>Most popular tours</h2>
           </div>
@@ -146,7 +146,7 @@ function Home() {
                       <p className='card__price-only'>Only</p>
                       <p className='card__price-value'>$287</p>
                     </div>
-                    <a href='' className='btn btn--white'>
+                    <a href='#popup' className='btn btn--white'>
                       Book now!
                     </a>
                   </div>
@@ -179,7 +179,7 @@ function Home() {
                       <p className='card__price-only'>Only</p>
                       <p className='card__price-value'>$487</p>
                     </div>
-                    <a href='' className='btn btn--white'>
+                    <a href='#popup' className='btn btn--white'>
                       Book now!
                     </a>
                   </div>
@@ -212,7 +212,7 @@ function Home() {
                       <p className='card__price-only'>Only</p>
                       <p className='card__price-value'>$887</p>
                     </div>
-                    <a href='' className='btn btn--white'>
+                    <a href='#popup' className='btn btn--white'>
                       Book now!
                     </a>
                   </div>

@@ -1,0 +1,128 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba($color-black, 0.8);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  @include respond(tab-port) {
+  }
+
+  // open the pop
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  // open state of the popup
+  &:target &__content {
+    opacity: 1;
+    transform: transform(-50%, -50%) scale(1);
+  }
+
+  // close the pop
+  &__close,
+  &:link,
+  &:visited {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    cursor: pointer;
+    color: $color-grey-dark;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    line-height: 1;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  //content of the popuo
+  &__content {
+    @include absCenter;
+    width: 75%;
+    background-color: $color-white;
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.3);
+    border-radius: 0.5rem;
+    display: table;
+    overflow: hidden;
+    opacity: 0;
+    transform: transform(-50%, -50%) scale(0);
+    transition: all 0.4s 0.2s;
+
+    @include respond(tab-port) {
+      display: block;
+      width: 75%;
+      height: auto;
+    }
+  }
+
+  // left contents of the pop
+  &__left {
+    display: table-cell;
+    width: 33.333333%;
+    vertical-align: middle;
+    @include respond(tab-port) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  // right contents of the pop
+  &__right {
+    display: table-cell;
+    width: 66.666667%;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+    @include respond(tab-port) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  // images of the pop
+  &__img {
+    display: block;
+    width: 100%;
+
+    @include respond(tab-port) {
+      display: inline-block;
+      width: 50%;
+      margin-top: 5rem;
+    }
+  }
+
+  // text of the pop
+  &__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    
+
+    -moz-column-count: 2;
+    -moz-column-gap: 4rem; //1em - 14px
+    -moz-column-rule: 1px solid rgba($color-grey-dark-1, 0.9);
+    column-count: 2;
+    column-gap: 4rem; //1em - 14px
+    column-rule: 1px solid rgba($color-grey-dark-1, 0.9);
+
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+
+    @include respond(tab-port) {
+      // -moz-column-count: 3;
+      // column-count: 3;
+      column-gap: 2rem;
+    }
+  }
+}
