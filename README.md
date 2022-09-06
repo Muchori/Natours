@@ -2,7 +2,10 @@
 
 This project uses react with pure CSS and SASS
 
-### `npm start`
+### `npm install`
+Installs the dependencies
+
+### `npm run dev`
 
 Runs the app in the development mode.
 
