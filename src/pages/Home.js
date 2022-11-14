@@ -14,7 +14,7 @@ function Home() {
           <div className='row'>
             <div className='col-1-of-2'>
               <h3 className='heading-tertiary u-margin-bottom-small'>
-                You're going to fall in love with nature
+                You're going to fall in love with nature, relax your mind
               </h3>
               <p className='paragraph'>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
